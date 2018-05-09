@@ -605,7 +605,7 @@ class postscript(printer):
       '''
       str_send = 'true 0 startjob {                                                     \n'\
                  '/setoldtime {/oldtime realtime def} def setoldtime                    \n'\
-                 '/threshold {realtime oldtime sub abs 10000 lt} def                    \n'\
+                 '/threshold {realtime oldtime sub abs 10 lt} def                    \n'\
                  '/free {vmstatus exch pop exch pop 1048576 div '+free+' ge} def        \n'\
                  '%---------------------------------------------------------------------\n'\
                  '%--------------[ get current document as file object ]----------------\n'\
